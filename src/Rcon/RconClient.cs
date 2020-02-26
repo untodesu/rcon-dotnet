@@ -46,16 +46,14 @@ namespace Rcon
         {
             NetworkStream stream = m_TcpClient.GetStream();
 
-            // This taken from rconsharp.
-            // So i still hardly understand that.
-            // This returns smaller than 4096 packet.
             byte[] buffer = new byte[4096]; // max rcon packet size
-            int offset = 0;
-            while(offset < 14) {
-                offset += await stream.ReadAsync(buffer, offset, buffer.Length);
-            }
-            byte[] result = new byte[offset];
-            Array.Copy(buffer, 0, result, 0, offset);
+            int bytes;
+            do {
+                bytes = await stream.ReadAsync(buffer, 0, buffer.Length);
+            } while(bytes == 0);
+
+            byte[] result = new byte[bytes];
+            Array.Copy(buffer, 0, result, 0, bytes);
             return result;
         }
 
@@ -67,16 +65,14 @@ namespace Rcon
         {
             NetworkStream stream = m_TcpClient.GetStream();
 
-            // This taken from rconsharp.
-            // So i still hardly understand that.
-            // This returns smaller than 4096 packet.
             byte[] buffer = new byte[4096]; // max rcon packet size
-            int offset = 0;
-            while(offset < 14) {
-                offset += stream.Read(buffer, offset, buffer.Length);
-            }
-            byte[] result = new byte[offset];
-            Array.Copy(buffer, 0, result, 0, offset);
+            int bytes;
+            do {
+                bytes = stream.Read(buffer, 0, buffer.Length);
+            } while(bytes == 0);
+
+            byte[] result = new byte[bytes];
+            Array.Copy(buffer, 0, result, 0, bytes);
             return result;
         }
 
