@@ -38,7 +38,7 @@ namespace Rcon.Types
                 Array.Reverse(copy);
             }
 
-            return BitConverter.ToInt32(copy, 0);
+            return BitConverter.ToInt32(copy, pos);
         }
     }
 }
