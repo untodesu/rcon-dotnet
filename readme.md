@@ -15,25 +15,25 @@ using Rcon;
 
 namespace RconClient
 {
-	static class Program
+    static class Program
     {
-    	static async Task Main(string[] args)
+        static async Task Main(string[] args)
         {
-        	RconClient client = new RconClient();
+            RconClient client = new RconClient();
             await client.ConnectAsync("127.0.0.1", 25575);
             await client.AuthenticateAsync("super_secret_password");
             if(!client.Authenticated) {
-            	Console.WriteLine("Invalid password!!");
+                Console.WriteLine("Invalid password!!");
                 return;
             }
             
             for(;;) {
-            	Console.Write("> ");
+                Console.Write("> ");
                 string response = await client.SendCommandAsync(Console.ReadLine());
                 if(!String.IsNullOrEmpty(response)) {
-                	Console.WriteLine("] {0}", response);
+                    Console.WriteLine("] {0}", response);
                 }
-          	}
+            }
         }
     }
 }
