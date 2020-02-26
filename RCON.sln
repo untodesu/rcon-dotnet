@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rcon", "src\Rcon\Rcon.csproj", "{AE942053-2B84-4240-92CC-E8AE050BEFD1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{14C1A90A-81A4-4328-BE0B-3E3821CD7CDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rcon", "src\Rcon\Rcon.csproj", "{AE942053-2B84-4240-92CC-E8AE050BEFD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{AE942053-2B84-4240-92CC-E8AE050BEFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE942053-2B84-4240-92CC-E8AE050BEFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE942053-2B84-4240-92CC-E8AE050BEFD1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14C1A90A-81A4-4328-BE0B-3E3821CD7CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14C1A90A-81A4-4328-BE0B-3E3821CD7CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14C1A90A-81A4-4328-BE0B-3E3821CD7CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14C1A90A-81A4-4328-BE0B-3E3821CD7CDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
