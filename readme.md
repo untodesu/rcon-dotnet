@@ -6,6 +6,20 @@
 * RCON Client
 * RCON Server
 
+# Installation
+#### Package Manager
+```
+PM> Install-Package Rcon -Version 1.0.0
+```
+#### .NET CLI
+```
+> dotnet add package Rcon --version 1.0.0
+```
+#### Project file
+```xml
+<PackageReference Include="Rcon" Version="1.0.0" />
+```
+
 # Usage example
 ## Client
 ```cs
